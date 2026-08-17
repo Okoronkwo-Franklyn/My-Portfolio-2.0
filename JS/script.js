@@ -49,3 +49,51 @@ serviceCards.forEach((card) => {
     });
 
 });
+
+// =========================================
+// PROJECT FILTER
+// =========================================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectItems = document.querySelectorAll(".project-item");
+
+filterButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+
+        // Active button
+
+        filterButtons.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+
+        // Filter projects
+
+        projectItems.forEach((project) => {
+
+            const category = project.dataset.category;
+
+            if (
+                filter === "all" ||
+                category === filter
+            ) {
+
+                project.classList.remove("hidden");
+
+            } else {
+
+                project.classList.add("hidden");
+
+            }
+
+        });
+
+    });
+
+});
