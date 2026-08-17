@@ -1,0 +1,391 @@
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.services-hero {
+    padding: 150px 0 100px;
+
+    background: #111111;
+
+    border-bottom: 1px solid #292929;
+}
+
+.services-hero-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    color: #999999;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services-hero-label span {
+    width: 8px;
+    height: 8px;
+
+    background: #ff9f0a;
+
+    border-radius: 50%;
+}
+
+.services-hero h1 {
+    max-width: 900px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+
+    line-height: 0.88;
+
+    letter-spacing: -6px;
+}
+
+.services-hero h1 span {
+    color: #ff9f0a;
+}
+
+.services-hero p {
+    max-width: 500px;
+
+    margin-top: 35px;
+
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.services-section {
+    padding: 100px 0 120px;
+
+    background: #151515;
+}
+
+.services-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.services-intro>p {
+    max-width: 300px;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* SERVICE LIST */
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* SERVICE CARD */
+
+.service-card {
+    overflow: hidden;
+
+    background: #202020;
+
+    border-radius: 18px;
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ACTIVE CARD */
+
+.service-card.active {
+    background: #ff9f0a;
+
+    color: #111111;
+}
+
+
+/* SERVICE TOP */
+
+.service-top {
+    min-height: 90px;
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr 50px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 0 25px;
+}
+
+
+/* NUMBER */
+
+.service-number {
+    color: #666666;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.service-card.active .service-number {
+    color: rgba(17, 17, 17, 0.55);
+}
+
+
+/* TITLE */
+
+.service-title h2 {
+    margin-bottom: 5px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+.service-title span {
+    color: #666666;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+.service-card.active .service-title span {
+    color: rgba(17, 17, 17, 0.6);
+}
+
+
+/* TOGGLE */
+
+.service-toggle {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff9f0a;
+
+    color: #111111;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.service-card.active .service-toggle {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+
+/* SERVICE CONTENT */
+
+.service-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 25px 0 135px;
+
+    transition:
+        max-height 0.45s ease,
+        padding 0.45s ease;
+}
+
+.service-card.active .service-content {
+    max-height: 200px;
+
+    padding-bottom: 30px;
+}
+
+
+/* TAGS */
+
+.service-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 17px;
+}
+
+.service-tags span {
+    padding: 7px 11px;
+
+    border-radius: 30px;
+
+    background: #292929;
+
+    color: #bbbbbb;
+
+    font-size: 9px;
+}
+
+.service-card.active .service-tags span {
+    background: rgba(17, 17, 17, 0.12);
+
+    color: #111111;
+}
+
+
+/* DESCRIPTION */
+
+.service-content p {
+    max-width: 650px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.service-card.active .service-content p {
+    color: rgba(17, 17, 17, 0.7);
+}
+
+
+/* =========================================
+   SERVICES CTA
+========================================= */
+
+.services-cta {
+    padding: 0 0 120px;
+
+    background: #151515;
+}
+
+.services-cta-box {
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 50px 60px;
+    background: #202020;
+
+    border: 1px solid #303030;
+
+    border-radius: 25px;
+}
+
+.services-cta-box h2 {
+    max-width: 650px;
+
+    margin-top: 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+}
+
+.services-cta-box h2 span {
+    color: #ff9f0a;
+}
+
+
+/* =========================================
+   SERVICES MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .services-hero {
+        padding: 110px 0 75px;
+    }
+
+    .services-hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .services-intro {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .service-top {
+        grid-template-columns: 40px 1fr 40px;
+
+        gap: 10px;
+
+        padding: 0 16px;
+    }
+
+    .service-title h2 {
+        font-size: 16px;
+    }
+
+    .service-title span {
+        font-size: 8px;
+    }
+
+    .service-content {
+        padding-left: 66px;
+        padding-right: 18px;
+    }
+
+    .services-cta-box {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 40px 25px;
+    }
+
+    .services-cta-box h2 {
+        letter-spacing: -2px;
+    }
+
+}
