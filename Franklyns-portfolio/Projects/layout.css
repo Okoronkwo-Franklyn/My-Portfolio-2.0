@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: #fdfbf5;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  background: linear-gradient(135deg, #080808, #1a1a1a);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  color: #ffd700;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #d4af37, #ffd700);
+  color: #111;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(135deg, #f4c430, #ffdf4d);
+  transform: translateY(-2px);
+}
+
+.signup-btn:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "sidebar"
+    "footer";
+
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #080808, #1a1a1a);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-bottom: 3px solid #ffd700;
+}
+
+.header h1 {
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header h1 span {
+  color: #ffd700;
+}
+
+.hero-text {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  color: #d6d6d6;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, #1a1a1a, #252525);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-top: 3px solid #ffd700;
+}
+
+.sidebar p {
+  margin: 1rem 0;
+  color: #e5e5e5;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.75rem;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.sidebar h2 {
+  color: #ffd700;
+}
+
+
+.main-content {
+  grid-area: main;
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.footer {
+  grid-area: footer;
+  background: linear-gradient(135deg, #080808, #151515);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-top: 2px solid #ffd700;
+}
+
+.footer p {
+  color: #ffd700;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.footer small {
+  display: block;
+  margin-top: 0.75rem;
+  color: #bdbdbd;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #1f1f1f;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #ffd700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.card h3 {
+  color: #ffd700;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+
+.featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+  border-left: 6px solid #ffd700;
+}
+
+@media (min-width: 768px) {
+  .page-layout {
+    grid-template-columns: 12.5rem 1fr;
+
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+}
+
+.reflection {
+  margin-top: 2rem;
+  background: #080808;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-top: 2px solid #d4af37;
+}
+
+.reflection h2 {
+  display: inline-block;
+  background: linear-gradient(135deg, #0f0f0f, #252525);
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+}
+
+.reflection p {
+  margin-bottom: 1rem;
+}
+
+.navbar,
+.header,
+.footer,
+.sidebar,
+.main-content,
+.reflection {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}

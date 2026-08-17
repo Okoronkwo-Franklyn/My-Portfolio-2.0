@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finexa - Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: "#222222",
+            brandPurple: "#7B61FF",
+            brandBlue: "#0099FF",
+            brandGreen: "#29CC6A",
+            brandRed: "#FC5555",
+            lightBg: "#F3F0FF",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-white text-[#222222] font-['Inter'] antialiased">
+  <header class="bg-gradient-to-b from-blue-300 via-sky-100 to-white">
+    <nav class="flex items-center justify-between px-10 py-8">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-brandPurple flex items-center justify-center text-white font-bold">
+          F
+        </div>
+
+        <h2 class="text-2xl font-bold">Finexa</h2>
+      </div>
+
+      <ul class="hidden lg:flex items-center gap-10 text-gray-600 font-medium">
+        <li>
+          <a href="#" class="hover:text-black transition"> Features </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-black transition"> Pricing </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-black transition"> Testimonials </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-black transition"> Company </a>
+        </li>
+      </ul>
+
+      <div class="hidden md:flex items-center gap-4">
+        <button class="font-medium">Sign Up</button>
+
+        <button class="bg-dark text-white rounded-full px-6 py-3 font-medium hover:scale-105 duration-300">
+          Start Free Trial
+        </button>
+      </div>
+
+      <button class="lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <section class="max-w-5xl mx-auto text-center px-6 pt-14">
+    <div class="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2 shadow-lg border">
+      <span class="text-sm font-medium">
+        Trusted by 2,000+ Finance Teams
+      </span>
+    </div>
+
+    <h1 class="mt-10 text-5xl md:text-7xl font-extrabold leading-tight tracking-tight max-w-5xl mx-auto">
+      Smarter Financial
+
+      <br />
+
+      Decisions, Powered By AI
+    </h1>
+
+    <p class="mt-8 text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-8">
+      From real-time analytics to predictive insights, our AI helps you stay
+      <br />
+      ahead of your finances with confidence
+    </p>
+
+    <div class="mt-12 flex flex-col sm:flex-row justify-center gap-5">
+      <button class="border border-gray-300 rounded-full px-8 py-4 font-semibold hover:bg-gray-100 transition">
+        Contact Sales
+      </button>
+
+      <button
+        class="bg-brandPurple text-white rounded-full px-8 py-4 font-semibold shadow-lg hover:scale-105 transition">
+        Book a Demo
+      </button>
+    </div>
+
+    <div class="mt-10 flex justify-center flex-wrap gap-8 text-sm text-gray-600">
+      <span>✔ Bank-grade security</span>
+      <span>✔ Certified secure</span>
+      <span>✔ Active users</span>
+      <span>✔ G2 & Capterra</span>
+    </div>
+  </section>
+
+  <main class="-mt-6 pb-20">
+    <section class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 mt-16">
+        <img src="Dashboard.png" alt="Dashboard Preview"
+          class="w-full rounded-3xl shadow-2xl border border-gray-200 object-cover" />
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-24">
+
+      <span class="inline-block px-4 py-2 rounded-full bg-gray-100 text-sm text-gray-700">
+        Finexa Overview
+      </span>
+
+      <h2 class="mt-8 text 4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+
+        <span class="text-zinc-900">
+          Finexa Is The Ultimate
+        </span>
+
+        <span class="text-zinc-400">
+          AI-Powered Finance Platform
+        </span>
+
+        <span class="text-zinc-900">
+          That Transforms Complex Financial Data
+        </span>
+
+        <span class="text-zinc-400">
+          Into Clear,
+        </span>
+
+        <span class="text-zinc-900">
+          Actionable Insights
+        </span>
+
+        <span class="text-zinc-400">
+          For Smarter Decision-Making.
+        </span>
+      </h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-20">
+
+        <div class="lg:col-span-8">
+          <p class="max-w-xl text-lg leading-9 text-zinc-600">
+            Finexa is a cutting-edge AI-powered financial intelligience platform built
+            for modern teams. By combining real-time analytics, AI-driven forecasting, and automated reporting,
+            it removes manual complexity and empowers businesses to manage budgets, predict cash flow, and scale with
+            confidence.
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 flex items-center justify-end">
+          <div class="flex flex-wrap justify-end gap-4 max-w-sm">
+            <span class="px-5 py-2 bg-zinc-100 rounded-full text-sm">
+              Finexa AI
+            </span>
+            <span class="px-5 py-2 bg-zinc-100 rounded-full text-sm">
+              cash Flow Intelligience
+            </span>
+            <span class="px-5 py-2 bg-zinc-100 rounded-full text-sm">
+              AI-Driven Insights
+            </span>
+            <span class="px-5 py-2 bg-zinc-100 rounded-full text-sm">
+              Finance & SaaS
+            </span>
+            <span class="px-5 py-2 bg-zinc-100 rounded-full text-sm">
+              Budgeting & Forecasting
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="bg-[#F5F3FF] py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center mb-20">
+          <p class="text-gray-500 text-sm mb-4">
+            Design Process
+          </p>
+
+          <h2 class="text-4xl md:text-6xl font-semibold text-gray-900">
+            How Finexa Was Crafted
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          
+          <div class="space-y-24">
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-200 p-6">
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-xl border flex items-center justify-center font-semibold">
+                  01
+                </span>
+
+                <h3 class="text-xl font-medium">
+                  Research & Analysis
+                </h3>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-200 p-6 ml-12">
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-xl border flex items-center justify-center font-semibold">
+                  02
+                </span>
+
+                <h3 class="text-xl font-medium">
+                  Concept Definition
+                </h3>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="space-y-24 mt-20">
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-200 p-6">
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-xl border flex items-center justify-center font-semibold">
+                  03
+                </span>
+
+                <h3 class="text-xl font-medium">
+                  User Research
+                </h3>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-200 p-6 ml-12">
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-xl border flex items-center justify-center font-semibold">
+                  04
+                </span>
+
+                <h3 class="text-xl font-medium">
+                  Design Iteration
+                </h3>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="space-y-24">
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-200 p-6">
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-xl border flex items-center justify-center font-semibold">
+                  05
+                </span>
+
+                <h3 class="text-xl font-medium">
+                  Visual Design (UI)
+                </h3>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-200 p-6 ml-12">
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-xl border flex items-center justify-center font-semibold">
+                  06
+                </span>
+
+                <h3 class="text-xl font-medium">
+                  User Testing
+                </h3>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bg-white py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center">
+          <p class="text-gray-500 text-sm mb-4">
+            Typography &amp; Color
+          </p>
+
+          <h2 class="text-4xl md:text-6xl font-medium leading-tight text-gray-800">
+            Crafting <span class="font-normal text-gray-400">Identity</span> With<br>
+            Color And <span class="font-normal text-gray-400">Type</span>
+          </h2>
+        </div>
+
+        <div class="mt-20">
+
+          <h1 class="text-center text-[5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11rem]
+               leading-none tracking-tight text-gray-00 whitespace-nowrap">
+            <span class="font-semibold">Inter</span>
+            <span class="font-normal">Display</span>
+          </h1>
+
+          <div class="flex justify-between items-end mt-10">
+
+            <p class="text-2xl text-gray-500 leading-relaxed">
+              The quick brown fox jumps<br>
+              over the lazy dog
+            </p>
+
+            <h2 class="text-6xl md:text-8xl font-light text-gray-500">
+              Aa123
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="flex justify-center mt-20 overflow-x-auto pb-4">
+
+          <div class="flex">
+
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-[#222222]
+                    flex items-center justify-center text-white text-xl font-medium z-50">
+              #222222
+            </div>
+
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-[#7B61FF]
+                    -ml-8 flex items-center justify-center text-white text-xl font-medium z-40">
+              #7B61FF
+            </div>
+
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-[#0099FF]
+                    -ml-8 flex items-center justify-center text-white text-xl font-medium z-30">
+              #0099FF
+            </div>
+
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-[#29CC6A]
+                    -ml-8 flex items-center justify-center text-white text-xl font-medium z-20">
+              #29CC6A
+            </div>
+
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-[#FC5555]
+                    -ml-8 flex items-center justify-center text-white text-xl font-medium z-10">
+              #FC5555
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+</body>
+
+<footer class="py-8 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-sm text-gray-500">
+            © 2026 Finexa • Designed & Developed by
+            <span class="font-semibold text-[#222222]">Franklyn</span>
+        </p>
+    </div>
+</footer>
+
+</html>

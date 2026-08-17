@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="600" height="64" fill="#111111"/>
+  <text x="36" y="40" font-family="Arial, sans-serif" font-weight="800" font-size="22" fill="#ffd700">⚡ FizzX</text>
+  <rect x="470" y="18" width="96" height="30" rx="15" fill="url(#gold)"/>
+  <text x="518" y="38" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#111" text-anchor="middle">Sign Up</text>
+
+  <text x="300" y="180" font-family="Arial, sans-serif" font-weight="800" font-size="34" fill="#ffffff" text-anchor="middle">Build Faster.</text>
+  <text x="300" y="222" font-family="Arial, sans-serif" font-weight="800" font-size="34" fill="#ffd700" text-anchor="middle">Ship Smarter.</text>
+  <text x="300" y="258" font-family="Arial, sans-serif" font-size="14" fill="#d6d6d6" text-anchor="middle">A responsive SaaS landing page built with flexbox</text>
+
+  <rect x="220" y="290" width="160" height="42" rx="21" fill="url(#gold)"/>
+  <text x="300" y="317" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#111" text-anchor="middle">Get Started</text>
+</svg>

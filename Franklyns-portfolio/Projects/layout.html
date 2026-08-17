@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout</title>
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">⚡ FizzX</div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="signup-btn">Sign Up</button>
+  </nav>
+
+  <div class="page-layout">
+
+    <header class="header">
+      <h1>Responsive <span>Design</span> Showcase</h1>
+      <p class="hero-text">
+      Exploring modern CSS layout techniques with Flexbox and Grid.
+      </p>
+    </header>
+
+    <aside class="sidebar">
+      <h2>Project Highlights</h2>
+
+      <p>
+      Demonstrates modern responsive web design principles and layout systems.
+      </p>
+
+      <ul>
+        <li>✔ Flexible Navigation</li>
+        <li>✔ Responsive Grid Layout</li>
+        <li>✔ Adaptive Typography</li>
+        <li>✔ Featured Content Card</li>
+        <li>✔ Mobile-Friendly Design</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+
+      <h2>Modern CSS Features</h2>
+
+      <div class="gallery">
+
+        <div class="card featured">
+          <h3>Responsive Design</h3>
+          <p>This layout adapts smoothly to different screen sizes.</p>
+        </div>
+
+        <div class="card">
+          <h3>Flexbox</h3>
+          <p>Flexible item alignment.</p>
+        </div>
+
+        <div class="card">
+          <h3>CSS Grid</h3>
+          <p>Two-dimensional layouts.</p>
+        </div>
+
+        <div class="card">
+          <h3>Media Queries</h3>
+          <p>Responsive breakpoints.</p>
+        </div>
+
+        <div class="card">
+          <h3>Fluid Typography</h3>
+          <p>Scalable text sizing.</p>
+        </div>
+
+        <div class="card">
+          <h3>Grid Spanning</h3>
+          <p>Cards across columns.</p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <h3>CSS Layout Assignment</h3>
+
+      <p>
+      Demonstrating Flexbox, Grid, Responsive Design & Modern CSS Techniques
+      </p>
+
+      <small>
+      Created for Responsive Web Design Coursework • 2026
+      </small>
+    </footer>
+
+  </div>
+
+  <section class="reflection">
+    <h2>Reflection</h2>
+
+    <p>
+      I used Flexbox for the navigation bar because it is a one-dimensional
+      layout. The navbar mainly arranges items along a single horizontal axis:
+      the logo, navigation links, and sign-up button. Flexbox makes it easy to
+      control alignment using justify-content and align-items. It also handles
+      spacing efficiently with gap and allows the layout to switch direction
+      when the screen size changes.
+    </p>
+
+    <p>
+      I used Grid for the page skeleton because it is a two-dimensional layout.
+      The page contains rows and columns that need to work together. Grid's
+      grid-template-areas feature makes the placement model very clear by naming
+      areas such as header, sidebar, main, and footer. Grid also supports
+      spanning, which allowed one gallery card to stretch across two columns.
+    </p>
+
+    <p>
+      A real layout that would benefit from switching tools is a photo gallery
+      built with Flexbox. While Flexbox can wrap items, Grid provides better
+      control over rows and columns and makes it easier to create consistent
+      card sizes. For layouts that require precise placement and spanning,
+      Grid is generally the better choice.
+    </p>
+
+  </section>
+
+</body>
+</html>
