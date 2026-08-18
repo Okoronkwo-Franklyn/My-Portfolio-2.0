@@ -78,6 +78,10 @@
                     About Me
                 </a>
 
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </nav>
 
 
@@ -244,7 +248,8 @@
 
                     <div class="contact-form-wrapper">
 
-                        <form class="contact-form" id="contactForm">
+                        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkjwpqrb"
+                            method="POST">
 
 
                             <div class="form-row">
@@ -316,6 +321,7 @@
                             <p class="form-status" id="formStatus"></p>
 
                         </form>
+
 
                     </div>
 
@@ -502,6 +508,87 @@
 
 
     <script src="JS/script.js"></script>
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+
+        contactForm.addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            console.log("FORM INTERCEPTED");
+
+            const submitButton =
+                contactForm.querySelector(".contact-submit");
+
+            submitButton.disabled = true;
+
+            submitButton.innerHTML =
+               ` Sending...
+        <span>...</span>`
+    ;
+
+        try {
+
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+
+                formStatus.textContent =
+                    "Message sent successfully! I'll get back to you soon.";
+
+                formStatus.style.color = "#ff9f0a";
+
+                contactForm.reset();
+
+                submitButton.innerHTML =
+                    `Message Sent ✓
+                <span>↗</span>`
+                    ;
+
+                setTimeout(() => {
+
+                    submitButton.disabled = false;
+
+                    submitButton.innerHTML =
+                        `Send Message
+                            < span >→</span >`
+                ;
+
+                }, 4000);
+
+            } else {
+
+                throw new Error("Formspree rejected the submission");
+
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            formStatus.textContent =
+                "Something went wrong. Please try again.";
+
+            formStatus.style.color = "#ff5c5c";
+
+            submitButton.disabled = false;
+
+            submitButton.innerHTML =
+                `Send Message
+                    < span >→</span >`
+        ;
+        }
+
+});
+    </script>F
 
 </body>
 
