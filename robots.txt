@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devfranklyn.netlify.app/sitemap.xml
