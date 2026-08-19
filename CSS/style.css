@@ -155,6 +155,32 @@ a {
   color: var(--orange);
 }
 
+/* ACTIVE NAV LINK */
+
+.nav-links a.active {
+  position: relative;
+
+  color: var(--orange);
+}
+
+.nav-links a.active::after {
+  content: '';
+
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--orange);
+
+  box-shadow: 0 0 8px rgba(255, 159, 10, 0.75);
+}
+
 /* TALK BUTTON */
 
 .talk-btn {
@@ -639,16 +665,38 @@ a {
     letter-spacing: -3px;
   }
 
+  .hero-main {
+    flex-direction: column;
+    gap: 18px;
+    min-height: auto;
+  }
+
   .hero-info {
+    position: static;
+    width: auto;
+  }
+
+  .right-info {
     display: none;
+  }
+
+  .left-info {
+    display: contents;
+  }
+
+  .left-info .small-title,
+  .left-info .hero-stat {
+    display: none;
+  }
+
+  .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
   }
 
   .profile-wrapper {
     width: 330px;
-  }
-
-  .hero-main {
-    min-height: 370px;
   }
 }
 
@@ -667,6 +715,16 @@ a {
 
   .hero-buttons {
     margin-top: 5px;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social svg {
+    width: 26px;
+    height: 18px;
   }
 }
 
@@ -1517,6 +1575,10 @@ a {
 }
 
 .footer-column a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
   color: #777777;
 
   font-size: 12px;
@@ -1528,6 +1590,22 @@ a {
   color: #ff9f0a;
 
   transform: translateX(3px);
+}
+
+/* FOOTER SOCIAL ICONS */
+
+.footer-social-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+
+  fill: currentColor;
+
+  transition: 0.3s ease;
+}
+
+.footer-column a:hover .footer-social-icon {
+  filter: drop-shadow(0 0 6px rgba(255, 159, 10, 0.5));
 }
 
 /* CONTACT LINK */
@@ -1692,6 +1770,17 @@ a {
 
   .nav-links a:hover {
     background: #242424;
+  }
+
+  .nav-links a.active {
+    background: rgba(255, 159, 10, 0.12);
+  }
+
+  .nav-links a.active::after {
+    left: 15px;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .menu-toggle.active span:first-child {
