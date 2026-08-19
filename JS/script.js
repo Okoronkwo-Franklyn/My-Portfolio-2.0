@@ -160,5 +160,5 @@ if (menuToggle && navLinks) {
 
     });
 
-}.
+}
 
