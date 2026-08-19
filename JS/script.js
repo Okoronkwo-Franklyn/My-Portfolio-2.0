@@ -3,6 +3,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================================
+// STICKY NAVBAR — PREMIUM SCROLL STATE
+// =========================================
+
+const navbar = document.querySelector(".navbar");
+
+if (navbar) {
+
+    const SCROLL_THRESHOLD = 40;
+
+    const updateNavbarState = () => {
+
+        if (window.scrollY > SCROLL_THRESHOLD) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+    };
+
+    // Run once on load in case the page starts pre-scrolled
+
+    updateNavbarState();
+
+    window.addEventListener("scroll", updateNavbarState, { passive: true });
+
+}
+
+// =========================================
 // SERVICES ACCORDION
 // =========================================
 

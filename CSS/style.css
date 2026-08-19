@@ -63,14 +63,16 @@ a {
 ========================= */
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
   width: 100%;
   padding: 25px 0;
 
-  z-index: 100;
+  z-index: 1000;
+
+  transition: padding 0.35s ease;
 }
 
 .nav-container {
@@ -89,6 +91,24 @@ a {
   background: rgba(17, 17, 17, 0.85);
 
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
+
+  transition: background 0.35s ease, border-color 0.35s ease,
+    box-shadow 0.35s ease, padding 0.35s ease;
+}
+
+/* PREMIUM SCROLLED STATE */
+
+.navbar.scrolled {
+  padding: 14px 0;
+}
+
+.navbar.scrolled .nav-container {
+  background: rgba(17, 17, 17, 0.72);
+  border-color: rgba(255, 159, 10, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* LOGO */
@@ -604,10 +624,6 @@ a {
 ========================= */
 
 @media (max-width: 800px) {
-  .nav-links {
-    display: none;
-  }
-
   .hero {
     min-height: 760px;
 
@@ -1620,8 +1636,8 @@ a {
 
 /* MOBILE NAVIGATION */
 
-@media (max-width: 768px) {
-  .nav container {
+@media (max-width: 800px) {
+  .nav-container {
     position: relative;
   }
 
@@ -1646,8 +1662,11 @@ a {
     border: 1px solid #303030;
     border-radius: 18px;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     opacity: 0;
-    visibility: translateY(-10px);
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     z-index: 1000;
   }
@@ -1655,6 +1674,7 @@ a {
   .nav-links.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
