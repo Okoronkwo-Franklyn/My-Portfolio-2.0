@@ -405,7 +405,7 @@ a {
 }
 
 .social svg {
-  width: 21px;
+  width: 30px;
   height: 21px;
 
   display: block;
@@ -438,13 +438,18 @@ a {
 
 /* Instagram */
 .instagram svg {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 21px;
 }
 
 /* Facebook */
 .facebook svg {
   fill: #1877f2;
+}
+
+/* Whatsapp */
+.whatsapp svg {
+  fill: #25d366;
 }
 
 /* STAT */
