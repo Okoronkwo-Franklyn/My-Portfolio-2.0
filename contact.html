@@ -60,7 +60,7 @@
             </a>
 
 
-            <nav class="nav-links">
+            <nav class="nav-links" id="navLinnks">
 
                 <a href="index.html">
                     Home
@@ -89,7 +89,15 @@
                 Let's Talk
             </a>
 
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
         </div>
+
+        
+
 
     </header>
 
@@ -525,69 +533,69 @@
             submitButton.disabled = true;
 
             submitButton.innerHTML =
-               ` Sending...
+                ` Sending...
         <span>...</span>`
-    ;
-
-        try {
-
-            const response = await fetch(contactForm.action, {
-                method: "POST",
-                body: new FormData(contactForm),
-                headers: {
-                    "Accept": "application/json"
-                }
-            });
-
-            if (response.ok) {
-
-                formStatus.textContent =
-                    "Message sent successfully! I'll get back to you soon.";
-
-                formStatus.style.color = "#ff9f0a";
-
-                contactForm.reset();
-
-                submitButton.innerHTML =
-                    `Message Sent ✓
-                <span>↗</span>`
-                    ;
-
-                setTimeout(() => {
-
-                    submitButton.disabled = false;
-
-                    submitButton.innerHTML =
-                        `Send Message
-                            < span >→</span >`
                 ;
 
-                }, 4000);
+            try {
 
-            } else {
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
 
-                throw new Error("Formspree rejected the submission");
+                if (response.ok) {
 
+                    formStatus.textContent =
+                        "Message sent successfully! I'll get back to you soon.";
+
+                    formStatus.style.color = "#ff9f0a";
+
+                    contactForm.reset();
+
+                    submitButton.innerHTML =
+                        `Message Sent ✓
+                <span>↗</span>`
+                        ;
+
+                    setTimeout(() => {
+
+                        submitButton.disabled = false;
+
+                        submitButton.innerHTML =
+                            `Send Message
+                            < span >→</span >`
+                            ;
+
+                    }, 4000);
+
+                } else {
+
+                    throw new Error("Formspree rejected the submission");
+
+                }
+
+            } catch (error) {
+
+                console.error(error);
+
+                formStatus.textContent =
+                    "Something went wrong. Please try again.";
+
+                formStatus.style.color = "#ff5c5c";
+
+                submitButton.disabled = false;
+
+                submitButton.innerHTML =
+                    `Send Message
+                    < span >→</span >`
+                    ;
             }
 
-        } catch (error) {
-
-            console.error(error);
-
-            formStatus.textContent =
-                "Something went wrong. Please try again.";
-
-            formStatus.style.color = "#ff5c5c";
-
-            submitButton.disabled = false;
-
-            submitButton.innerHTML =
-                `Send Message
-                    < span >→</span >`
-        ;
-        }
-
-});
+        });
     </script>F
 
 </body>
